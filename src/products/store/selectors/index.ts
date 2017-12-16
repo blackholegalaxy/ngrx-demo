@@ -1,1 +1,1 @@
-export * from './pizzas.selectors.ts';
+export * from './pizzas.selectors';
