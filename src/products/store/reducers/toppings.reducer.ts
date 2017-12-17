@@ -5,7 +5,7 @@ export interface ToppingsState {
   entities: { [id: number]: Topping }
   loaded: boolean;
   loading: boolean;
-}
+};
 
 export const initialState: ToppingsState = {
   entities: {},
