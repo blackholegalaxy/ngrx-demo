@@ -30,14 +30,14 @@ export function reducer(state = initialState, action: fromPizzas.PizzasAction): 
           ...entities,
           [pizza.id]: pizza
         }
-      }, { ...state.entities })
+      }, { ...state.entities });
 
       return {
         ...state,
         loading: false,
         loaded: true,
         entities
-      }
+      };
     }
 
     case fromPizzas.LOAD_PIZZAS_FAIL: {
@@ -45,7 +45,7 @@ export function reducer(state = initialState, action: fromPizzas.PizzasAction): 
         ...state,
         loading: false,
         loaded: false
-      }
+      };
     }
   }
 
