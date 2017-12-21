@@ -16,3 +16,15 @@ export const checkPizzaLoaded = (store: Store<fromStore.ProductsState>): Observa
     take(1)
   );
 };
+
+export const checkToppingsLoaded = (store: Store<fromStore.ProductsState>): Observable<boolean> => {
+  return store.select(fromStore.getToppingsLoaded).pipe(
+    tap(loaded => {
+      if (!loaded) {
+        store.dispatch(new fromStore.LoadToppings());
+      }
+    }),
+    filter(loaded => loaded),
+    take(1)
+  );
+};

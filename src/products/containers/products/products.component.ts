@@ -37,7 +37,8 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.pizzas$ = this.store.select<any>(fromStore.getAllPizzas);
 
+    // Replaced by guards:
     // this.store.dispatch(new fromStore.LoadPizzas());
-    this.store.dispatch(new fromStore.LoadToppings());
+    // this.store.dispatch(new fromStore.LoadToppings());
   }
 }
