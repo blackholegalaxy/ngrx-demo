@@ -11,7 +11,7 @@ import * as fromServices from '../../services';
 export class PizzasEffects {
   constructor(private actions$: Actions, private pizzasService: fromServices.PizzasService) { }
 
-  @Effect() // Option: {dispatch: false} to prevent dispatch action after effect
+  @Effect()
   loadPizzas$ = this.actions$.ofType(pizzasActions.LOAD_PIZZAS).pipe(
     switchMap(() => {
       return this.pizzasService.getPizzas().pipe(
